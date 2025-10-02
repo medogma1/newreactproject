@@ -4,7 +4,7 @@ A professional, responsive React application showcasing a product catalog with m
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://yourusername.github.io/react-product-catalog/)
+[View Live Demo](https://medogma1.github.io/newreactproject/)
 
 ## 📋 Features
 
