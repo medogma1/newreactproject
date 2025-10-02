@@ -1,0 +1,199 @@
+/* Error Message Styles */
+.error-message {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-message.warning {
+  background: #fffbeb;
+  border-color: #fed7aa;
+}
+
+.error-message.info {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.error-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.error-icon {
+  flex-shrink: 0;
+  color: #dc2626;
+  margin-top: 0.125rem;
+}
+
+.error-message.warning .error-icon {
+  color: #d97706;
+}
+
+.error-message.info .error-icon {
+  color: #2563eb;
+}
+
+.error-text {
+  flex-grow: 1;
+}
+
+.error-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #991b1b;
+  margin: 0 0 0.5rem 0;
+}
+
+.error-message.warning .error-title {
+  color: #92400e;
+}
+
+.error-message.info .error-title {
+  color: #1e40af;
+}
+
+.error-description {
+  font-size: 0.9375rem;
+  color: #7f1d1d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.error-message.warning .error-description {
+  color: #78350f;
+}
+
+.error-message.info .error-description {
+  color: #1e3a8a;
+}
+
+.retry-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.error-message.warning .retry-button {
+  background: #d97706;
+}
+
+.error-message.info .retry-button {
+  background: #2563eb;
+}
+
+.retry-button:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.error-message.warning .retry-button:hover {
+  background: #b45309;
+}
+
+.error-message.info .retry-button:hover {
+  background: #1d4ed8;
+}
+
+.retry-button:active {
+  transform: translateY(0);
+}
+
+.retry-button:focus {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+.error-message.warning .retry-button:focus {
+  outline-color: #d97706;
+}
+
+.error-message.info .retry-button:focus {
+  outline-color: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .error-message {
+    padding: 1.25rem;
+    margin: 0.75rem 0;
+  }
+
+  .error-content {
+    gap: 0.75rem;
+  }
+
+  .error-title {
+    font-size: 1rem;
+  }
+
+  .error-description {
+    font-size: 0.875rem;
+  }
+
+  .retry-button {
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-message {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .error-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .error-icon {
+    align-self: flex-start;
+  }
+}
+
+/* Animation */
+.error-message {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .error-message {
+    animation: none;
+  }
+  
+  .retry-button:hover {
+    transform: none;
+  }
+}
